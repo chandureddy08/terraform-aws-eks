@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "chandu-reddy-s3-buckets"
-    key = "terraform-eks-main"
+    key = "terraform-eks-vpc"
     region = "us-east-1"
     dynamodb_table = "chandureddy-dev"
   }
