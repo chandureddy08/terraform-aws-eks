@@ -1,19 +1,17 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
-      version = "5.57"
-    }
+        source = "hashicorp/aws"
+        version = "5.57"
+    } 
   }
   backend "s3" {
-    bucket = "daws78s-remote-state"
-    key    = "expense-dev-eks"
+    bucket = "chandu-reddy-s3-buckets"
+    key = "eks-vpc"
     region = "us-east-1"
-    dynamodb_table = "daws78s-locking"
+    dynamodb_table = "chandureddy-dev"
   }
 }
-
-#provide authentication here
-provider "aws" {
-  region = "us-east-1"
-}
+  provider "aws"{
+    region = "us-east-1"
+  }
