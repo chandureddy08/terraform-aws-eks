@@ -59,7 +59,7 @@ module "vpn" {
   ingress_rules = var.vpn_sg_rules
 }
 
-resource "aws_security_group_rule" "bastion_public" {
+resource "aws_security_group_rule" "bastion_public" {       # In prod env we enable elastic ip of our project
   type              = "ingress"
   from_port         = 22
   to_port           = 22

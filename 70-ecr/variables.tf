@@ -11,14 +11,9 @@ variable "common_tags" {
     Project = "expense"
     Environment = "dev"
     Terraform = "true"
-    Component = "ingress-alb"
   }
 }
 
 variable "zone_name" {
   default = "chandureddy.online"
-}
-
-variable "zone_id" {
-  default = "Z08884492QFPW45HM4UQO"
 }

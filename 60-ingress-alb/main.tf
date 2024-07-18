@@ -77,7 +77,7 @@ resource "aws_lb_listener_rule" "frontend" {
 
   condition {
     host_header {
-      # expense-dev.daws78s.online --> frontend pod
+      # expense-dev.chandureddy.online --> frontend pod
       values = ["expense-${var.environment}.${var.zone_name}"]
     }
   }
@@ -88,7 +88,6 @@ module "records" {
   version = "~> 2.0"
 
   zone_name = var.zone_name
-  
   records = [
     {
       name    = "expense-${var.environment}"
