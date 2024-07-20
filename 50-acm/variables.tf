@@ -11,7 +11,6 @@ variable "common_tags" {
     Project = "expense"
     Environment = "dev"
     Terraform = "true"
-    Component = "ingress-alb"
   }
 }
 
@@ -20,5 +19,5 @@ variable "zone_name" {
 }
 
 variable "zone_id" {
-  default = "Z08884492QFPW45HM4UQO"
+  default = "Z1007947UZZMRR34QF56"
 }
