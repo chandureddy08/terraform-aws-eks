@@ -7,9 +7,9 @@ terraform {
   }
   backend "s3" {
     bucket = "chandu-reddy-s3-buckets"
-    key = "eks-ecr"
+    key = "expence-dev-ecr"
     region = "us-east-1"
-    dynamodb_table = "chandureddy-dev"
+    dynamodb_table = "chandureddy-prod"
   }
 }
   provider "aws"{

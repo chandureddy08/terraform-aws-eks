@@ -77,17 +77,21 @@ resource "aws_lb_listener_rule" "frontend" {
 
   condition {
     host_header {
-      # expense-dev.chandureddy.online --> frontend pod
+      # expense-dev.daws78s.online --> frontend pod
       values = ["expense-${var.environment}.${var.zone_name}"]
     }
   }
 }
+
+
+
 
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
   version = "~> 2.0"
 
   zone_name = var.zone_name
+  
   records = [
     {
       name    = "expense-${var.environment}"
