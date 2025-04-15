@@ -59,6 +59,7 @@ module "vpn" {
   ingress_rules = var.vpn_sg_rules
 }
 
+# in projects we use our elastic ip not public
 resource "aws_security_group_rule" "bastion_public" {
   type              = "ingress"
   from_port         = 22
@@ -149,7 +150,7 @@ resource "aws_security_group_rule" "ingress_public_http" {
   security_group_id = module.ingress.sg_id
 }
 
-#
+# Node is accepting traffic from ingress
 resource "aws_security_group_rule" "node_ingress" {
   type              = "ingress"
   from_port         = 30000
@@ -158,4 +159,3 @@ resource "aws_security_group_rule" "node_ingress" {
   source_security_group_id = module.ingress.sg_id
   security_group_id = module.node.sg_id
 }
-
