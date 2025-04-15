@@ -1,5 +1,9 @@
+# Infrastructure
 
-# Infrastructure Setup Guide for EKS and Related Services
+![alt text](eks-infra.svg)
+
+
+## Infrastructure Setup Guide for EKS and Related Services
 
 This document outlines the steps to create and configure the infrastructure required for an EKS cluster, along with necessary services like VPC, Security Groups, RDS, ACM, ALB, ECR, and CDN. The steps also include admin activities related to Bastion Host and accessing the cluster and RDS.
 
