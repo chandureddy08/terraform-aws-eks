@@ -146,7 +146,7 @@ For setting up the AWS Load Balancer Controller as an ingress controller for Kub
 
 ---
 
-### References:
+### Reference:
 - [AWS Load Balancer Controller Documentation](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.8/)
 
 ---
